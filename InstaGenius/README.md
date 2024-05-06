@@ -2,36 +2,52 @@
 
 # InstaGenius
 
-InstaGenius is a Python application that leverages the Groq and Serper APIs to perform certain tasks.
+InstaGenius is an AI-powered bot integrated with various features to assist with Instagram post generation and content creation tasks. It generates captions for Instagram posts and provides prompts for mid-journey or any image generator AI. Additionally, it analyzes product details and website information to generate comprehensive analyses. The output includes six descriptions: three for captions and three for mid-journey prompts.
 
-## Prerequisites
+## Shout-out
 
-Before running InstaGenius, ensure you have the following prerequisites installed on your system:
+Special thanks to [bhancockio/instagram-llama3-crewai](https://github.com/bhancockio/instagram-llama3-crewai.git) for providing the main project code. InstaGenius utilizes this codebase and extends its functionality with a user-friendly website and a clean UI, making it accessible to users without coding knowledge.
 
-- Python 3.11 or any
-- [Poetry](https://python-poetry.org/docs/) for managing dependencies
+## Features
 
-## Configuration
-
-1. Rename the `.env.example` file to `.env`.
-2. Obtain your Groq and Serper API keys.
-3. Insert your API keys into the `.env` file.
+- AI-powered caption generation for Instagram posts
+- Mid-journey prompt generation for creative content
+- Product analysis based on details and website information
+- User-friendly website with a clean UI for easy navigation
 
 ## Installation
 
-1. Open a terminal or command prompt.
-2. Navigate to the root directory of the InstaGenius project.
-3. Run the following commands to set up the project environment:
+To use InstaGenius, follow these steps:
+
+1. Clone this repository.
+2. Install Python 3.11 or above.
+3. Configure the environment by copying the `.env.example` file to `.env` and inserting the required API keys.
+4. Install Poetry for managing dependencies.
+5. Set up the project environment using the following commands:
 
 ```bash
 poetry shell
 poetry install --no-root
 ```
 
-## Execution
+## Usage
 
-To execute InstaGenius, run the following command:
+To run InstaGenius, execute the following command:
 
 ```bash
 python main.py
 ```
+
+## Contributing
+
+InstaGenius is under active development, and contributions are welcome. If you have any suggestions, feature requests, or bug reports, please open an issue or submit a pull request.
+
+## Disclaimer
+
+Please note that InstaGenius is still under development and may undergo frequent updates and changes. 
+
+## License
+
+This project is licensed under the [MIT License](LICENSE).
+
+---
