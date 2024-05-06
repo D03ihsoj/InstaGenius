@@ -51,3 +51,4 @@ Please note that InstaGenius is still under development and may undergo frequent
 This project is licensed under the [MIT License](LICENSE).
 
 ---
+
