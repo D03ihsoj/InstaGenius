@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>InstaGenius</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            transition: background-color 7.5s ease;
+            animation: colorChange 7.5s infinite alternate;
+        }
+        
+        .container {
+            background-color: rgba(255, 255, 255, 0.9);
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); /* Added shadow */
+            max-width: 600px;
+            width: 100%;
+            margin: auto;
+            position: relative; /* Make container relative for absolute positioning */
+        }
+        
+        h1 {
+            text-align: center;
+            margin-bottom: 30px;
+            color: #333;
+            text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.1);
+        }
+
+        h2 {
+            text-align: center; /* Center align the text */
+            margin-bottom: 20px;
+            background-color: rgba(255, 255, 255, 0.9);
+            padding: 10px;
+            border-radius: 6px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+            max-width: fit-content;
+        }
+
+        @keyframes colorChange {
+            0% { background-color: #FF9F7E; }
+            50% { background-color: #FF6A88; }
+            100% { background-color: #6A7AFF; }
+        }
+
+        .instagenius {
+            font-size: 48px;
+            font-weight: bold;
+            background-image: linear-gradient(45deg, #feda75, #fa7e1e, #d62976, #962fbf, #4f5bd5);
+            background-clip: text;
+            -webkit-background-clip: text;
+            color: transparent;
+            animation: moveColors 5s linear infinite; /* Set the animation properties */
+        }
+
+        
+        form {
+            display: grid;
+            grid-template-columns: 1fr;
+            grid-gap: 20px;
+            position: relative; /* Make form relative for absolute positioning */
+        }
+        
+        label {
+            font-weight: bold;
+            color: #555;
+        }
+        
+        input[type="text"],
+        textarea,
+        select {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ccc;
+            border-radius: 6px;
+            box-sizing: border-box;
+            font-size: 16px;
+            transition: border-color 0.3s ease;
+        }
+
+        select:focus,
+        input[type="text"]:focus,
+        textarea:focus {
+            outline: none;
+            border-color: #6e95d3;
+        }
+
+        input[type="submit"] {
+            background-color: #6A7AFF; /* Changed submit button color */
+            color: white;
+            padding: 15px 20px;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background-color 0.3s ease;
+            animation: colorChange 7.5s infinite alternate;
+            position: relative; /* Make submit button relative for absolute positioning */
+            font-weight: bold; /* Make submit button bold */
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3); /* Added shadow */
+        }
+        
+        input[type="submit"]:hover {
+            background-color: #4C4CFF; /* Changed hover color */
+        }
+        
+        /* Processing message styles */
+        .processing-message {
+            position: absolute; /* Position absolutely */
+            top: calc(100% + 10px); /* Position above submit button */
+            left: 50%; /* Center horizontally */
+            transform: translateX(-50%); /* Adjust horizontal position */
+            background-color: rgba(255, 255, 255, 0.9); /* Background color */
+            padding: 10px 20px; /* Padding */
+            border-radius: 6px; /* Border radius */
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Box shadow */
+            opacity: 0; /* Initially hidden */
+            transition: opacity 0.5s ease; /* Smooth transition effect */
+        }
+        
+        .processing-message.active {
+            opacity: 1; /* Show message */
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 class="instagenius">InstaGenius</h1>
+        <h2>Choose Model</h2> <!-- Center-aligned -->
+        <select name="model" id="modelSelect">
+            <option value="llama3-8b-8192">llama3-8b-8192</option>
+            <option value="gemma-7b-it">gemma-7b-it</option>
+            <option value="mixtral-8x7b-32768">mixtral-8x7b-32768</option>
+            <option value="llama3-70b-8192">llama3-70b-8192</option>
+        </select>
+        
+        <form id="myForm" action="/result" method="post" onsubmit="showProcessingMessage()">
+            <label for="website">Website URL:</label>
+            <input type="text" id="website" name="website" placeholder="https://example.com">
+            
+            <label for="details">Product Details:</label>
+            <textarea id="details" name="details" rows="6" placeholder="Enter product details..."></textarea>
+            
+            <input type="submit" value="Submit">
+            
+            <!-- Processing message -->
+            <div class="processing-message" id="processingMessage">Processing your request, please wait...</div>
+        </form>
+    </div>
+
+    <script>
+        function showProcessingMessage() {
+            document.getElementById("processingMessage").classList.add("active");
+        }
+    </script>
+</body>
+</html>
