@@ -1,5 +1,4 @@
----
-
+```
 # InstaGenius
 
 InstaGenius is an AI-powered bot integrated with various features to assist with Instagram post generation and content creation tasks. It generates captions for Instagram posts and provides prompts for mid-journey or any image generator AI. Additionally, it analyzes product details and website information to generate comprehensive analyses. The output includes six descriptions: three for captions and three for mid-journey prompts.
@@ -49,6 +48,5 @@ Please note that InstaGenius is still under development and may undergo frequent
 ## License
 
 This project is licensed under the [MIT License](LICENSE).
-
----
+``` 
 
