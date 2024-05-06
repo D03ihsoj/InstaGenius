@@ -6,6 +6,7 @@ InstaGenius is an AI-powered bot integrated with various features to assist with
 
 ## Shout-out
 
+
 Special thanks to [bhancockio/instagram-llama3-crewai](https://github.com/bhancockio/instagram-llama3-crewai) for providing the main project code. InstaGenius utilizes this codebase and extends its functionality with a user-friendly website and a clean UI, making it accessible to users without coding knowledge.
 
 ## Features
