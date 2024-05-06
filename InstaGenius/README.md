@@ -1,5 +1,3 @@
----
-
 **InstaGenius**
 
 InstaGenius is like your AI sidekick for Instagram! 🤖 It's loaded with features to make your posts shine, from crafting captions to sparking creativity with prompts. Plus, it's got some smarts for analyzing products too!
@@ -50,4 +48,4 @@ InstaGenius is a work in progress, so expect some changes along the way!
 
 This project is licensed under the MIT License.
 
----
+
